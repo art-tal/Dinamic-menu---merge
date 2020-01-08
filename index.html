@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Merge</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+
+	<header>
+		<div class="logo">LOGO</div>
+		<p id="toggleMenu">
+			<!-- <span id="closeMenu">X</span> -->
+			<img id="closeMenu" src="img/times.svg" alt="img/times.svg">
+			<!-- <span id="openMenu">E</span> -->
+			<img id="openMenu" src="img/bars.svg" alt="img/bars.svg">
+		</p>
+	</header>
+
+	<nav id="nav">
+		<menu>
+			<ul>
+				<li><a href="#" id="navHome" class="activeLink">Home<div></div></a></li>
+				<li><a href="#" id="navFeatures">Features<div></div></a></li>
+				<li><a href="#" id="navSupport">Support<div></div></a></li>
+				<li><a href="#" id="navReleases">Releases<div></div></a></li>
+				<li><a href="#" id="navAbout">About<div></div></a></li>
+				<li><a href="#" id="navLicense">License<div></div></a></li>
+			</ul>
+		</menu>
+		<div id="social" class="social">
+			<a href="#"><img src="img/twitter-brands.svg" alt="img/twitter-brands.svg"></a>
+			<a href="#"><img src="img/github-brands.svg" alt="img/github-brands.svg"></a>
+			<a href="#"><img src="img/behance-brands.svg" alt="img/behance-brands.svg"></a>
+		</div>
+	</nav>
+
+	<main>
+		<div class="block active" id="blockHome">1</div>
+
+		<div class="block" id="blockFeatures">2</div>
+
+		<div class="block" id="blockSupport">
+			<div class="img">
+				<img src="img/C_sharp.png" alt="img/C_sharp.png">
+			</div>
+			
+			<h1>Динамическое меню с контентом</h1>
+			<p>Что тебе нужно почитать для выполнения задачи</p>
+			<form>
+				<div id="btn-download">
+					<span>Download</span>
+					<img id="os_download" src="img/apple-white.png" alt="img/apple-white.png">
+
+					<img id="down" src="img/angle-down-white.png" alt="img/angle-down-white.png">
+					
+					<ul id="os">
+						<li><img id="iOS" src="img/apple-white.png" alt="img/apple-white.png" title="iOS"></li>
+						<li><img id="linux" src="img/linux-white.png" alt="img/linux-white.png" title="Linux"></li>
+						<li><img id="android" src="img/android-white.png" alt="img/android-white.png" title="Android"></li>
+						<li><img id="windows" src="img/windows-white.png" alt="img/windows-white.png" title="Windows"></li>
+					</ul>
+					
+				</div>
+				<label for="btn-download">v1.4.1 <sup>new</sup></label>
+			</form>
+			
+			<div class="status">
+				<img src="img/party.png" alt="img/party.png">
+				<span>CSS переходы и анимация</span>
+				<img src="img/star.png" alt="img/star.png">
+				<img src="img/star.png" alt="img/star.png">
+				<img src="img/star.png" alt="img/star.png">
+			</div>
+
+			<div class="git">
+				<img src="img/github-brands.svg" alt="img/github-brands.svg">
+				<span>изменение расположения макета и содержимого</span>
+			</div>
+
+			<div id="download-progress" class="download-progress">
+				<menu>
+					<div class="traffic_light">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+					<div class="logo">Logo</div>
+					<img src="img/bars-white.png" alt="img/bars-white.png" id=download-bar>
+					<img src="img/plus-white.png" alt="img/plus-white.png" id="download-add">
+
+					<img src="img/sliders-h-white.png" alt="img/sliders-h-white.png" id="download-settings">
+					<img src="img/question-circle-white.png" alt="img/question-circle-white.png" id="question">
+				</menu>
+				<aside>
+					<h2>Task</h2>
+					<ul>
+						<li><a>Downloading</a></li>
+						<li><a>Waiting</a></li>
+						<li><a>Stopped</a></li>
+					</ul>
+				</aside>
+				<div class="download-status">
+					<div class='header'>
+						<h2>Downloading</h2>
+						<img src="img/icon.svg" alt="img/icon.svg">
+						<img src="img/icons8-play-16.png" alt="img/icons8-play-16.png">
+						<img src="img/icons8-pause-50.png" alt="img/icons8-pause-50.png">
+					</div>
+					<div class="progress">
+						<div class="row">
+							<span id="fileName">ubuntu.16.04.1-life-server-amd64.iso</span>
+							<img src="img/icons8-pause-50.png" alt="img/icons8-pause-50.png">
+							<img src="img/times.svg" alt="img/times.svg">
+							<img src="img/folder-regular.svg" alt="img/folder-regular.svg">
+							<img src="img/link-solid.svg" alt="img/link-solid.svg">
+							<img src="img/clock-regular.svg" alt="img/clock-regular.svg">
+						</div>
+						<div class="wrap">
+							<div class="line">
+								<div class="done"></div>
+							</div>
+							<span>354.3 MB / 812.0 MB</span>
+							<span>19.0 MB/s Remaining 25s</span>
+						</div>
+					</div>
+					<div class="speed">
+						<img src="img/car-speedometer.svg" alt="img/car-speedometer.svg">
+						<sup>MAX</sup>
+
+						<div>
+							<span>0 kB/s</span>
+							<p>19.0 MB/s</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+		
+
+		<div class="block" id="blockReleases">4</div>
+		<div class="block" id="blockAbout">5</div>
+		<div class="block" id="blockLicense">6</div>
+	</main>
+
+
+<footer>
+	<span>&#xA9;2019 Motrix</span>
+	<p>
+		<span>English</span>
+		<span>|</span>
+		<span>Russia</span>
+	</p>
+</footer>
+
+	
+	<script src="libs/jQuery/jquery-3.4.1.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
