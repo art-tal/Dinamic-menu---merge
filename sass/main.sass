@@ -25,6 +25,7 @@ $font-color: #44464C
 body
 	background-color: $bg-color-body
 	font-family: sans-serif
+	position: relative
 
 
 
@@ -101,10 +102,84 @@ nav
 			img
 				width: 100%
 
+.signIn
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(236, 237, 241, 0.5)
+	// padding: 15vh 40%
+	z-index: 999
+	.wrap
+		width: 400px
+		margin-top: 15vh
+		margin-left: calc( (100% - 400px)/2 )
+
+	#choiceSignIn
+		@extend %flex
+		justify-content: space-around
+		.choiceOption
+			box-sizing: border-box
+			text-decoration: none
+			width: 50%
+			border-bottom: 2px solid #222
+			background-color: #bbb
+			color: #222
+			padding: 15px
+			border-radius: 10px 10px 0 0
+			text-align: center
+			&:hover
+				font-weight: bold
+			&.activeOption
+				font-weight: bold
+				border: 2px solid #222
+				border-bottom: none
+				background-color: #fff
+	form
+		display: none
+		text-align: center
+		border-radius: 0 0 10px 10px
+		&.activeForm
+			display: block
+			background-color: #fff
+			border: 2px solid #222
+			border-top: none
+			padding: 25px 15px
+		input
+			width: 100%
+			border-radius: 5px
+			font-size: 18px
+			padding: 10px
+			margin-bottom: 15px
+			&:focus
+				box-shadow: 0 0 2px 2px #7EBAFD
+			&:not([type=submit]).invalid:placeholder
+				color: red
+			&:disabled
+				color:#fff
+			&[type=submit]:hover
+				cursor: pointer
+				color: #fff
+				border-color: #5FAFDB
+				// background-color: #BCDCF4
+				background: radial-gradient(at top, #72BDE8, #1189D5)
+		.error
+			color: red
+			font-size: 14px
+		a
+			color: #5FAFDB
+
+.valid
+	box-shadow: 0 0 2px 2px lightgreen
+.invalid
+	box-shadow: 0 0 2px 2px red
 
 main
 	position: relative
 	width: 100%
+	
+
 	.block
 		height: 800px
 		// width: 100%
@@ -172,26 +247,16 @@ main
 					img
 						margin: 0
 						height: 18px
-			select
-				background-color: #000
-				border: none
-				margin-left: 15px
-				width: 50px
-				background-repeat: no-repeat
-				background-position: left center
-				background-size: 16px
-				background-image: url(../img/apple-white.png)
-				// option
-				// 	width: 50px
-				// 	background-repeat: no-repeat
-				// 	background-position: center center
-				// 	background-size: 16px
-				// 	&[value="iOS"]
-				// 		background-image: url(../img/apple-white.png)
-				// 	&[value="android"]
-				// 		background-image: url(../img/android-brands.svg)
-				// 	&[value="windows"]
-				// 		background-image: url(../img/windows-brands.svg)
+			// select
+			// 	background-color: #000
+			// 	border: none
+			// 	margin-left: 15px
+			// 	width: 50px
+			// 	background-repeat: no-repeat
+			// 	background-position: left center
+			// 	background-size: 16px
+			// 	background-image: url(../img/apple-white.png)
+				
 		label
 			margin-left: 15px
 			color: $font-color

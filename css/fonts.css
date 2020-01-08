@@ -2,24 +2,4 @@
   font-family: "RobotoRegular";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), 
-url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), 
-url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "SegoeWP";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/SegoeWP.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "SegoeWPLight";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/SegoeWPLight.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "SourceSPR";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/SourceSansPro-Regular.otf") format("truetype"); }
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype"); }

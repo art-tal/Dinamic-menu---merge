@@ -1,5 +1,86 @@
 $(document).ready( function() {
 
+	$('.choiceOption').on('click', function(event) {
+		let activated = event.target.attributes['id'].value;
+		$('.choiceOption').removeClass('activeOption');
+		$('form').removeClass('activeForm');
+		$( this ).addClass('activeOption');
+		$(`form[name=${activated}]`).addClass('activeForm');
+	});
+
+	$('#signIN .activeForm input:not([type=submit])').on('keydown', function(event) {
+		
+		// if ( this.validity.valid ){
+		// 	$(this).removeClass('invalid');
+		// 	$(this).addClass('valid');
+		// 	$(this).next(".error").text('');
+		// } else {
+		// 	$(this).removeClass('valid');
+		// 	$(this).next(".error").text('Input Error');
+		// 	$(this).addClass('invalid');
+		// }
+
+		validateInput(this);
+
+		if ( checkInput() ) {
+			$('#signIN .activeForm input[type=submit]').removeAttr('disabled');
+			console.log( $('#signIN .activeForm input[type=submit]') );
+		};
+	});
+
+	function validateInput(obj) {
+		if ( obj.validity.valid ){
+			$(obj).removeClass('invalid');
+			$(obj).addClass('valid');
+			$(obj).next(".error").text('');
+		} else {
+			$(obj).removeClass('valid');
+			$(obj).next(".error").text('Input Error');
+			$(obj).addClass('invalid');
+		}
+	}
+
+	function checkInput() {
+		let flag = true;
+		$('#signIN .activeForm input:not([type=submit])')
+			.each( function() {
+				console.log(this);
+				if ( $(this).hasClass('invalid') ){
+					console.log('Попался');
+					return flag = false;
+				}
+			});
+		
+		return flag;
+	}
+
+
+
+	$('#signIN .activeForm input[type=submit]').on('click', function(event) {
+		// let resolusion = false;
+		$('.activeForm input:not([type=submit])').each( function(key) {
+			validateInput(this);
+		} );
+
+		if ( checkInput() ) {
+			$('#signIN').slideUp(1000);
+		}
+
+		event.preventDefault();
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
 	/*ПЕреключение вкладок внутри открытого муню*/
 	let blocks = $('.block');
 	let navLinks = $('#nav li > a');
