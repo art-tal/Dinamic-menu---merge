@@ -11,6 +11,10 @@ $font-color: #44464C
 	justify-content: space-between
 	align-items: center
 
+@mixin sign 
+	width: 400px
+	margin-top: 15vh
+	margin-left: calc( (100% - 400px)/2 )
 
 
 
@@ -83,7 +87,8 @@ nav
 				&.activeLink
 					font-weight: bold
 				div
-					width: 1%
+					width: 0%
+					margin: 0 auto
 					height: 3px
 					border-bottom: 1px solid #fff
 				// &:hover > div
@@ -110,11 +115,12 @@ nav
 	height: 100%
 	background-color: rgba(236, 237, 241, 0.5)
 	// padding: 15vh 40%
-	z-index: 999
+	z-index: 990
 	.wrap
-		width: 400px
-		margin-top: 15vh
-		margin-left: calc( (100% - 400px)/2 )
+		@include sign
+		// width: 400px
+		// margin-top: 15vh
+		// margin-left: calc( (100% - 400px)/2 )
 
 	#choiceSignIn
 		@extend %flex
@@ -151,11 +157,11 @@ nav
 			border-radius: 5px
 			font-size: 18px
 			padding: 10px
-			margin-bottom: 15px
+			margin-bottom: 5px
 			&:focus
 				box-shadow: 0 0 2px 2px #7EBAFD
-			&:not([type=submit]).invalid:placeholder
-				color: red
+			// &:not([type=submit]).invalid:placeholder
+			// 	color: red
 			&:disabled
 				color:#fff
 			&[type=submit]:hover
@@ -165,10 +171,63 @@ nav
 				// background-color: #BCDCF4
 				background: radial-gradient(at top, #72BDE8, #1189D5)
 		.error
+			display: block
 			color: red
 			font-size: 14px
+			margin-bottom: 10px
 		a
 			color: #5FAFDB
+
+	.verification
+		@include sign
+		display: none
+		text-align: center
+		background-color: #FCFCFC
+		border: 1px solid #B2B5BC
+		border-radius: 10px
+		padding: 25px
+		box-shadow: 0 0 5px 2px #B2B5BC
+		h3
+			font-weight: bold
+			font-size: 18px
+			color: #000
+			margin-bottom: 20px
+		hr
+			width: 40%
+			margin: 15px 30%
+			border: none
+			border-bottom: 1px solid #ccc
+		p
+			font-size: 14px
+			color: #333
+			margin-top: 20px
+			margin-bottom: 25px
+		form
+			display: block
+			.wraper
+				@extend %flex
+				.field
+					width: 45%
+					input
+						width: 33.3%
+						padding: 10px
+						font-size: 34px
+						border: 1px solid #DEE0E2
+						border-radius: 0
+						text-align: center
+						position: relative
+						&:first-child
+							border-radius: 5px 0 0 5px
+						&:last-child
+							border-radius: 0 5px 5px 0
+						&:focus
+							z-index: 999
+
+				span
+					color: #E2E5EB
+					font-size: 34px
+
+
 
 .valid
 	box-shadow: 0 0 2px 2px lightgreen
@@ -247,16 +306,7 @@ main
 					img
 						margin: 0
 						height: 18px
-			// select
-			// 	background-color: #000
-			// 	border: none
-			// 	margin-left: 15px
-			// 	width: 50px
-			// 	background-repeat: no-repeat
-			// 	background-position: left center
-			// 	background-size: 16px
-			// 	background-image: url(../img/apple-white.png)
-				
+
 		label
 			margin-left: 15px
 			color: $font-color

@@ -51,23 +51,50 @@
 			</div>
 			
 			<form method="post" action="#" name="authorization" class="activeForm">
-				<input type="email" placeholder="Enter your e-mail" required>
+				<input type="email" placeholder="Enter your e-mail" required name="eMail">
 				<span class="error"></span>
-				<input type="password" placeholder="Enter your password" required pattern="[A-Za-z0-9_']{8,}">
+				<input type="password" placeholder="Enter your password" name="password" required pattern="[A-Za-z0-9_']{8,}">
 				<span class="error"></span>
 				<input type="submit" value="Submit" disabled id="logSubmit">
 				<a href="#">I forgot my password</a>
 			</form>
 
 			<form method="post" action="#" name="registration">
-				<input type="text" placeholder="Last Name" name="lastName" required>
-				<input type="text" placeholder="First Name" name="firstName" required>
-				<input type="text" placeholder="NikName" name="nikName" required>
-				<input type="tel" placeholder="Phone" name="Phone" required>
+				<input type="text" placeholder="Last Name" name="lastName" required
+				 pattern="[A-Za-z]{2,}">
+				<span class="error"></span>
+				<input type="text" placeholder="First Name" name="firstName" required pattern="[A-Za-z]{2,}">
+				<span class="error"></span>
+				<input type="text" placeholder="NikName" name="nikName" required pattern="[A-Za-z]{2,}">
+				<span class="error"></span>
+				<input type="tel" placeholder="Phone" name="phone" required id="phone">
+				<span class="error"></span>
 				<input type="email" placeholder="E-mail" name="eMail" required>
+				<span class="error"></span>
 				<input type="password" placeholder="Password" name="password" pattern="[A-Za-z0-9_']{8,}" required>
+				<span class="error"></span>
 				<input type="password" placeholder="Confirm Password" name="confirmPassword" pattern="[A-Za-z0-9_']{8,}" required>
+				<span class="error"></span>
 				<input type="submit" value="Submit" disabled id="regSubmit">
+			</form>
+		</div>
+
+		<div id="verification" class="verification">
+			<h3>Please enter your verification code.</h3>
+			<hr>
+			<p>Open up your authentificator app to view your verification code.</p>
+			<form action="#" method="post" name="verification">
+				<div class="wraper">
+					<div class="field">
+						<input type="text" pattern="[0-9]{1}" tabindex="1" autofocus maxlength="1"><input type="text" pattern="[0-9]{1}" tabindex="2" maxlength="1"><input type="text" pattern="[0-9]{1}" tabindex="3" maxlength="1">
+					</div>
+					<span> - </span>
+					<div class="field">
+						<input type="text" pattern="[0-9]{1}" tabindex="4" maxlength="1"><input type="text" pattern="[0-9]{1}" tabindex="5" maxlength="1"><input type="text" pattern="[0-9]{1}" tabindex="6" maxlength="1">
+					</div>
+				</div>
+				<p>Or, <a href="#">try another way to log in.</a></p>
+				<input type="submit" value="Sign in to your account" tabindex="7">
 			</form>
 		</div>
 
@@ -198,6 +225,7 @@
 
 	
 	<script src="libs/jQuery/jquery-3.4.1.min.js"></script>
+	<script src="libs/jQuery/jquery.maskedinput.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
